@@ -1,6 +1,6 @@
 # Solution
 
-The `1a.c` source includes `//`-style comments. When using `-ansi` flag (a.k.a `-std=89`) compiler will emit error
+The `1a.c` source includes `//`-style comments. When using `-ansi` flag (a.k.a `-std=c89`) compiler will emit error
 
 ```sh
 $ gcc -ansi exercises/0201/1a.c
