@@ -17,7 +17,7 @@ No error nor warning will be emitted when compiling this program without any fla
 $ gcc exercises/0201/1b.c -o out/e0201a
 ```
 
-`1a.c` will compile without any warning/error with `-std=c99`. As comparison about standard, [Linux Kernal only move to `-std=gnu11` in 2022](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=e8c07082a810fbb9db303a2b66b66b8d7e588b53)
+`1a.c` will compile without any warning/error with `-std=c99`. As comparison about standard, [Linux Kernel only move to `-std=gnu11` in 2022](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=e8c07082a810fbb9db303a2b66b66b8d7e588b53)
 
 For demonstration purpose, `1b.c` contains acceptable implementation for `-std=c89` or `-ansi` by swapping `//` into `/*` comment style and return value for `main()`
 

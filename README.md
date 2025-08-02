@@ -4,9 +4,9 @@ My solutions and notes for K. N. King's "C Programming: A Modern Approach", seco
 
 ## Takeaways
 
-_Holding myself back to keep doing exercises and projects from this book that might seem rudimentary from problem-solving perspective has given me more opportunity to focus on expriencing C's rough edges. Tasting its edges provide the appropriate context and historical reasoning that inform me when thinking about C code quality._
+_Holding myself back to keep doing exercises and projects from this book that might seem rudimentary from problem-solving perspective has given me more opportunity to focus on experiencing C's rough edges. Tasting its edges provide the appropriate context and historical reasoning that inform me when thinking about C code quality._
 
-_Being small but unrestricted language put the extra emphasis on understanding where and when to push the language strength. Having familiarity with rouch edges of C as annoying as it might be (compared to language such as Rust, Zig, Odin) is still good investment for me, as C is still the backbone of a lot of modern software with how much code written in it_
+_Being small but unrestricted language put the extra emphasis on understanding where and when to push the language strength. Having familiarity with rough edges of C as annoying as it might be (compared to language such as Rust, Zig, Odin) is still good investment for me, as C is still the backbone of a lot of modern software with how much code written in it_
 
 ## Zettels
 
@@ -21,7 +21,7 @@ while((c = getchar()) != EOF) {
 ```
 Hence, be careful of side effects:
 ```c
-// Expession such as:
+// Expression such as:
 i = j = k = O;
 // is equal to
 i = (j = (k = 0));
