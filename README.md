@@ -30,3 +30,15 @@ i = f = 33.3f;
 // f assigned as 33.3
 // i equals to 33 due to implicit conversion
 ```
+
+### Beware of operators for logical expressions
+
+Just like assignment operator, in order to build logical expression we use several operators (e.g. <, >, <=, >=, ==, !=, &&).
+
+When building these expressions, always be aware that each operator will produce an output (0, 1) and might cause unexpected behavior
+
+```c
+// These expressions are completely legal.
+i < j < k
+(i < j) < k // Since < operator produces 0 or 1, the second < resolves into 1 < k;
+```
