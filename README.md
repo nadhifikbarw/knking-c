@@ -11,7 +11,7 @@ _Being small, spartanic, and unrestricted language put the emphasis on the knowl
 
 _During this learning process, avoiding as much assumptions as possible about what a language is has been proven beneficial. If you're someone that have experiences using other language, assumptions about language feature(s) that can seemingly be second nature may lead you astray without the right contexts in C._
 
-_Such as the case of, having a scoped variable declaration within the first expression of `for` statement (See Zettels below)._
+_Such as the case of, having a scoped variable declaration within the first expression of `for` statement (See this Zettel [below](#c89s-for-loop-variable-declaration))._
 
 _This syntax is very common in modern languages, but C89 doesn't allow it.These kind of nuanced takeaways can effectively be learned when you try to avoid as many assumptions about a language by using the language building blocks thoroughly._
 
