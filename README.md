@@ -81,5 +81,30 @@ int main(void) {
 
 GCC will produce error such as `‘for’ loop initial declarations are only allowed in C99 or C11 mode`.
 
+### Comma is an operator
+
+Comma `,` is a left-operand operator.
+
+```c
+i = 1, j = 2
+```
+
+`expr1` "result" value will be discarded here, and value of `expr2` is used.
+In example above, expression above has `2` value
+
+Beware of unexpected operation order, this is not math.
+
+```c
+i = 1, j = 2, k = i + j
+```
+
+Due to `,` being left operand, expressions above equals to
+
+```
+((i = 1), (j = 2)), (k = (i + j))
+```
+
+More on [Operator Precedence](https://cppreference.com/w/c/language/operator_precedence.html).
+
 
 
