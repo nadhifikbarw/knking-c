@@ -9,6 +9,8 @@ _Exercises and projects from this book might seem rudimentary from "problem diff
 
 _Being small, spartanic, and unrestricted language put the emphasis on the knowledge of where and when to push the language features. I consider having familiarity with rough edges of C, as annoying as it might be compared to more "cleaned up" languages such as: Rust, Zig, Odin, a good investment. As C is still the backbone of a lot of modern software with how much code written in it._
 
+_Stories from the cURL project decided to stick with c89 after [considering C99](https://daniel.haxx.se/blog/2022/11/17/considering-c99-for-curl/), and only [recently Linux moved on to use `-std=gnu11`](https://stackoverflow.com/questions/20600497/which-c-version-is-used-in-the-linux-kernel) could be real-world examples of how timeless the process of learning C (and its pitfalls) can be._
+
 _During this learning process, avoiding as much assumptions as possible about what a language is has been proven beneficial. If you're someone that have experiences using other language, assumptions about language feature(s) that can seemingly be second nature may lead you astray without the right contexts in C._
 
 _Such as the case of, having a scoped variable declaration within the first expression of `for` statement (See this Zettel [below](#c89s-for-loop-variable-declaration))._
