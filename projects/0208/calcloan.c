@@ -12,7 +12,7 @@ int main(void) {
 
     interest = apr/100.0f/12.0f;
 
-    printf("Enter amount of loan: ");
+    printf("Enter monthly loan payment: ");
     scanf("%f", &monthly);
 
     // First
