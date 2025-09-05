@@ -8,9 +8,9 @@ int main(void) {
     printf("Enter first date (mm/dd/yy): ");
     if (
         scanf("%d/%d/%d", &mm1, &dd1, &yy1) != 3
-        || mm1 < 0 || mm1 > 12
+        || mm1 <= 0 || mm1 > 12
         || yy1 < 0 || yy1 > 99
-        || dd1 < 0
+        || dd1 <= 0
     ) {
         printf("Please provide valid inputs using (mm/dd/yy format)");
         return 7;
@@ -47,9 +47,9 @@ int main(void) {
     printf("Enter second date (mm/dd/yy): ");
     if (
         scanf("%d/%d/%d", &mm2, &dd2, &yy2) != 3
-        || mm2 < 0 || mm2 > 12
+        || mm2 <= 0 || mm2 > 12
         || yy2 < 0 || yy2 > 99
-        || dd2 < 0
+        || dd2 <= 0
     ) {
         // Once the book introduces function, this will be easier
         printf("Please provide valid inputs using (mm/dd/yy format)");
@@ -72,8 +72,7 @@ int main(void) {
             max_days = 30;
             break;
         case 2:
-            // 100th year is not 29
-            max_days = yy2 == 0 || yy2 % 4 != 0  ? 28 : 29;
+            max_days = yy2 % 4 != 0 ? 28 : 29;
             break;
     }
     if (dd2 > max_days) {
@@ -81,18 +80,7 @@ int main(void) {
         return 7;
     }
 
-
-    int first_earlier;
-    int yy_offset = yy1 - yy2;
-    int mm_offset = mm1 - mm2;
-    int dd_offset = dd1 - dd2;
-    if (yy_offset != 0) {
-        first_earlier = yy_offset < 0;
-    } else if (mm_offset != 0) {
-        first_earlier = mm_offset < 0;
-    } else if (dd_offset != 0) {
-        first_earlier = dd_offset < 0;
-    } else {
+    if (yy1 == yy2 && mm1 == mm2 && dd1 == dd2) {
         printf(
             "%d/%d/%02d and %d/%d/%02d are the same date",
             mm1, dd1, yy1, mm2, dd2, yy2
@@ -100,7 +88,12 @@ int main(void) {
         return 0;
     }
 
-     printf(
+    int first_earlier = (
+        yy < earlier_yy
+        || (yy == earlier_yy && mm < earlier_mm)
+        || (yy == earlier_yy && mm == earlier_mm && dd < earlier_dd)
+    );
+    printf(
         "%d/%d/%02d is earlier than %d/%d/%02d",
         first_earlier ? mm1 : mm2,
         first_earlier ? dd1 : dd2,
